@@ -1,25 +1,25 @@
 class Scriba < Formula
   desc "Local-first usage tracking for Claude Code and Codex"
   homepage "https://github.com/agensfield/scriba"
-  version "0.2.9"
+  version "0.3.0"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/agensfield/scriba/releases/download/v#{version}/scriba_#{version}_darwin_arm64.tar.gz"
-      sha256 "54f4d62f67ce3f0a632c0c2e2f5982bae01a95c98c9512da387a1dc12260317d"
+      sha256 "df35e89fd429072c0b449f30d381af6327763d1cd57c29c33381c5629555d83b"
     else
       url "https://github.com/agensfield/scriba/releases/download/v#{version}/scriba_#{version}_darwin_amd64.tar.gz"
-      sha256 "82fc205c3bca340d591922d9820546ef77816db76dd7fece74f4042674b86778"
+      sha256 "f2ec4c2ab03dd8e24ca498df3d946bed077c9b50975c1baa22288841cd673116"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
       url "https://github.com/agensfield/scriba/releases/download/v#{version}/scriba_#{version}_linux_arm64.tar.gz"
-      sha256 "8ebe9cc7783ce01c054cb6f8d7cf5bb45b8f304c6cc84f369ac38d536429140f"
+      sha256 "dd9a8cd72ff7b7226d2141d557513d28577aed4db6d6f8eb4fb205dec4aa6521"
     else
       url "https://github.com/agensfield/scriba/releases/download/v#{version}/scriba_#{version}_linux_amd64.tar.gz"
-      sha256 "07eb7ab343142abc8a69e86242a585f3bfcc4a09d671d75426f5f71b71dcd68f"
+      sha256 "e72bc35103d893bb5e8d46ae0bd65ca19c3af20d10990044b557748743b1583f"
     end
   end
 
