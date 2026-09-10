@@ -3,21 +3,21 @@ class Scriba < Formula
   homepage "https://github.com/agensfield/scriba"
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/agensfield/scriba/releases/download/v0.3.4/scriba_0.3.4_darwin_arm64.tar.gz"
-      sha256 "4a85b045f455944c020e9bb9e12b9572b018d0305248ec867e283f6b75cf9a5a"
+      url "https://github.com/agensfield/scriba/releases/download/v0.4.0/scriba_0.4.0_darwin_arm64.tar.gz"
+      sha256 "63738c2b151fe605559d3b265dadf4e95b851a5f22669dd34a8fc34d9e38f5da"
     else
-      url "https://github.com/agensfield/scriba/releases/download/v0.3.4/scriba_0.3.4_darwin_amd64.tar.gz"
-      sha256 "44550963cfc012892b763be6d309b5e5afae6657350cccf530abe21a0da2dfe2"
+      url "https://github.com/agensfield/scriba/releases/download/v0.4.0/scriba_0.4.0_darwin_amd64.tar.gz"
+      sha256 "9ac1515334d175e08e1b6374c2cb27014713efb8fcbc6503ddf3277f536c390b"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/agensfield/scriba/releases/download/v0.3.4/scriba_0.3.4_linux_arm64.tar.gz"
-      sha256 "0031cff23d578e86834ded298078d589b2557f96896d85479b0099e5b108d3af"
+      url "https://github.com/agensfield/scriba/releases/download/v0.4.0/scriba_0.4.0_linux_arm64.tar.gz"
+      sha256 "ed1cdf48b63e1044393ef89be926d94a5543a457337f44be5c3a859799b6560a"
     else
-      url "https://github.com/agensfield/scriba/releases/download/v0.3.4/scriba_0.3.4_linux_amd64.tar.gz"
-      sha256 "c9fa472620fd19aaec3d1a7e93577a5e46cb3c4c58914fb951834b74c706d3a7"
+      url "https://github.com/agensfield/scriba/releases/download/v0.4.0/scriba_0.4.0_linux_amd64.tar.gz"
+      sha256 "822ec4c5c71e6c3850d3c0065434c3efb04de3976b04161bd2903c98c427e772"
     end
   end
 
