@@ -1,26 +1,26 @@
 class Verso < Formula
   desc "Deliberate Codex account switching with one native working home"
   homepage "https://github.com/agensfield/verso"
-  version "0.1.0-alpha.3"
+  version "0.1.0-alpha.4"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/agensfield/verso/releases/download/v0.1.0-alpha.3/verso_0.1.0-alpha.3_darwin_arm64.tar.gz"
-      sha256 "340543412b07b874a21f3a61748cfd83ca777b7bc68668d97c1ac893f0d7e1a2"
+      url "https://github.com/agensfield/verso/releases/download/v0.1.0-alpha.4/verso_0.1.0-alpha.4_darwin_arm64.tar.gz"
+      sha256 "80f5980e75f9695afcb08cd023bd84bc58952898f208d0531363e5033fffac39"
     else
-      url "https://github.com/agensfield/verso/releases/download/v0.1.0-alpha.3/verso_0.1.0-alpha.3_darwin_amd64.tar.gz"
-      sha256 "c854169b708a6c0362511d3464dd609788a532a5148310b5a31fc188fee86cc5"
+      url "https://github.com/agensfield/verso/releases/download/v0.1.0-alpha.4/verso_0.1.0-alpha.4_darwin_amd64.tar.gz"
+      sha256 "911514bc868f7894de22e6f946daca069ab7195066268811a2b65be96cc11a48"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/agensfield/verso/releases/download/v0.1.0-alpha.3/verso_0.1.0-alpha.3_linux_arm64.tar.gz"
-      sha256 "49628fe758df4b19b02a1324b669328ad4d28864ee59514909df535a129cd494"
+      url "https://github.com/agensfield/verso/releases/download/v0.1.0-alpha.4/verso_0.1.0-alpha.4_linux_arm64.tar.gz"
+      sha256 "cd9c51933d2767f5d3c4258170159e16778efe8d3e091650f7a361b49f5b7df5"
     else
-      url "https://github.com/agensfield/verso/releases/download/v0.1.0-alpha.3/verso_0.1.0-alpha.3_linux_amd64.tar.gz"
-      sha256 "d2e2a8f9ca8745b2993da6bbe91579d02e646fb225c938ca381a93dee5a11751"
+      url "https://github.com/agensfield/verso/releases/download/v0.1.0-alpha.4/verso_0.1.0-alpha.4_linux_amd64.tar.gz"
+      sha256 "d151861248f2dbcf18ccb1f158769e608e9a6582a9cdf200e4c9695d1c4792f1"
     end
   end
 
