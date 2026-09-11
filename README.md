@@ -12,12 +12,14 @@ brew tap agensfield/tap
 
 ### Formulae
 
+- `verso` - Deliberate Codex account switching (alpha).
 - `scriba` - Local-first usage tracking for Claude Code and Codex.
 
 ## Install Packages
 
 ```sh
 brew install agensfield/tap/scriba
+brew install agensfield/tap/verso
 ```
 
 ## Updating Formulae

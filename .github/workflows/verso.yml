@@ -1,0 +1,28 @@
+name: Test Verso Formula
+
+on:
+  push:
+    branches: [main]
+    paths: [Formula/verso.rb, .github/workflows/verso.yml]
+  pull_request:
+    paths: [Formula/verso.rb, .github/workflows/verso.yml]
+
+permissions:
+  contents: read
+
+jobs:
+  install:
+    runs-on: macos-latest
+    timeout-minutes: 15
+    env:
+      HOMEBREW_NO_AUTO_UPDATE: "1"
+      HOMEBREW_NO_INSTALL_CLEANUP: "1"
+      HOMEBREW_NO_ANALYTICS: "1"
+    steps:
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+      - name: Install this formula from the reviewed checkout
+        run: |
+          ruby -c Formula/verso.rb
+          brew tap --custom-remote agensfield/tap "$GITHUB_WORKSPACE"
+          brew install agensfield/tap/verso
+          brew test agensfield/tap/verso
