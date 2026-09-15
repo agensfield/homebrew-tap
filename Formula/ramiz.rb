@@ -1,7 +1,7 @@
 class Ramiz < Formula
   desc "Ridiculously cheap Git worktrees using filesystem copy-on-write"
   homepage "https://github.com/agensfield/ramiz"
-  version "1.0.0"
+  version "1.0.1"
   license "MIT"
 
   depends_on "git"
@@ -9,20 +9,20 @@ class Ramiz < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/agensfield/ramiz/releases/download/v#{version}/ramiz_#{version}_darwin_arm64.tar.gz"
-      sha256 "27fca34d10a6d5671eac55ba59cdb269aea5b829ef98a5a1a4d55579b3b494ec"
+      sha256 "2122673bbbfdb0be4f90889e5360c439103879e886ddaa9f69addfd27ee8de5b"
     else
       url "https://github.com/agensfield/ramiz/releases/download/v#{version}/ramiz_#{version}_darwin_amd64.tar.gz"
-      sha256 "1b4067d2be466a887d7f10b7d81857bebca2dc4c31a69162701c2a26328057c5"
+      sha256 "44b512f756ea19a1645fdbbae057a9a5e6d98a69af09885469eeb8320b5b370f"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
       url "https://github.com/agensfield/ramiz/releases/download/v#{version}/ramiz_#{version}_linux_arm64.tar.gz"
-      sha256 "a04fee0548dfcb43b0d3229afa07b7598daa14ada10b465d544567cd9a85c1d9"
+      sha256 "ac3363f6466221c7673da5d4488168ffed47159ff9b17b018a00b35dcdd780c7"
     else
       url "https://github.com/agensfield/ramiz/releases/download/v#{version}/ramiz_#{version}_linux_amd64.tar.gz"
-      sha256 "2f8a2fc0fa189a65f88e195bf6fa0a0c734bfb37a2815e3d9d8d7c63d76fc3db"
+      sha256 "647f9ba32ff1b882e62b05eee8da7e21863f53d3cc9d2cfc20483c326cb44198"
     end
   end
 
