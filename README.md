@@ -12,12 +12,14 @@ brew tap agensfield/tap
 
 ### Formulae
 
+- `mektup` - Reliable Codex thread control and agent messaging.
 - `verso` - Deliberate Codex account switching (alpha).
 - `scriba` - Local-first usage tracking for Claude Code and Codex.
 
 ## Install Packages
 
 ```sh
+brew install agensfield/tap/mektup
 brew install agensfield/tap/scriba
 brew install agensfield/tap/verso
 ```
