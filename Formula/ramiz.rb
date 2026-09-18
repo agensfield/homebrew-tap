@@ -7,21 +7,21 @@ class Ramiz < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/agensfield/ramiz/releases/download/v1.0.1/ramiz_1.0.1_darwin_arm64.tar.gz"
-      sha256 "2122673bbbfdb0be4f90889e5360c439103879e886ddaa9f69addfd27ee8de5b"
+      url "https://github.com/agensfield/ramiz/releases/download/v1.0.2/ramiz_1.0.2_darwin_arm64.tar.gz"
+      sha256 "b5ee494669e4d2d327338dcc068e995c27aa1f05a6e19d35ce38ccc90249bbbc"
     else
-      url "https://github.com/agensfield/ramiz/releases/download/v1.0.1/ramiz_1.0.1_darwin_amd64.tar.gz"
-      sha256 "44b512f756ea19a1645fdbbae057a9a5e6d98a69af09885469eeb8320b5b370f"
+      url "https://github.com/agensfield/ramiz/releases/download/v1.0.2/ramiz_1.0.2_darwin_amd64.tar.gz"
+      sha256 "54d88c794d3c7d644c5b6f5830622c4be087e185fb8c244bdbc8d0972606ae9d"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/agensfield/ramiz/releases/download/v1.0.1/ramiz_1.0.1_linux_arm64.tar.gz"
-      sha256 "ac3363f6466221c7673da5d4488168ffed47159ff9b17b018a00b35dcdd780c7"
+      url "https://github.com/agensfield/ramiz/releases/download/v1.0.2/ramiz_1.0.2_linux_arm64.tar.gz"
+      sha256 "2555baf0b2abd74f49331233508818db3482b7f209731cf17d3ed7e8abd3fd4f"
     else
-      url "https://github.com/agensfield/ramiz/releases/download/v1.0.1/ramiz_1.0.1_linux_amd64.tar.gz"
-      sha256 "647f9ba32ff1b882e62b05eee8da7e21863f53d3cc9d2cfc20483c326cb44198"
+      url "https://github.com/agensfield/ramiz/releases/download/v1.0.2/ramiz_1.0.2_linux_amd64.tar.gz"
+      sha256 "a73cb608bd500aa05258985d80c41344109ac1ae67b0049b8733c55b6b9610dd"
     end
   end
 
