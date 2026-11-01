@@ -8,21 +8,21 @@ class Mektup < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/agensfield/mektup/releases/download/v1.0.16/mektup_1.0.16_darwin_arm64.tar.gz"
-      sha256 "59c8b163c0cfc1f395383df8c4b818c7d0920180e2cbb23c1c1d54817c35fa95"
+      url "https://github.com/agensfield/mektup/releases/download/v1.0.17/mektup_1.0.17_darwin_arm64.tar.gz"
+      sha256 "70d25f1982d1a3619196f3af33de396bf9640b0e84bc8199d703f059a5f0579f"
     else
-      url "https://github.com/agensfield/mektup/releases/download/v1.0.16/mektup_1.0.16_darwin_amd64.tar.gz"
-      sha256 "032f89159b27f3ad2cbf72d73e773a0db08112a53909c3f87ab2f2e3731ef919"
+      url "https://github.com/agensfield/mektup/releases/download/v1.0.17/mektup_1.0.17_darwin_amd64.tar.gz"
+      sha256 "445ae8ec9429c75b1b16fbffcd774b761642162941b520658673fa13453df41c"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/agensfield/mektup/releases/download/v1.0.16/mektup_1.0.16_linux_arm64.tar.gz"
-      sha256 "c9f7eb55046e33de1fbb128fd53e79803c5a31c5d4f97a456e2e82312b26804d"
+      url "https://github.com/agensfield/mektup/releases/download/v1.0.17/mektup_1.0.17_linux_arm64.tar.gz"
+      sha256 "3dc57f7781c81c3a9d0cbcb5c72dadc482bd893fcc5731e4532e95ea3a32c5b6"
     else
-      url "https://github.com/agensfield/mektup/releases/download/v1.0.16/mektup_1.0.16_linux_amd64.tar.gz"
-      sha256 "c6ddc1da419a7e82de416cd86e887deaf470e8c5e5ca07d77978614a19b6b0bd"
+      url "https://github.com/agensfield/mektup/releases/download/v1.0.17/mektup_1.0.17_linux_amd64.tar.gz"
+      sha256 "ef87c2720070d5156e281ed8e32d9f283ed5f90354f093e5523f8d81bf919e04"
     end
   end
 
@@ -31,7 +31,7 @@ class Mektup < Formula
   end
 
   test do
-    assert_match '"version":"1.0.16"', shell_output("#{bin}/mektup version --json")
+    assert_match '"version":"1.0.17"', shell_output("#{bin}/mektup version --json")
     assert_match "Usage: mektup", shell_output("#{bin}/mektup --help")
   end
 end
