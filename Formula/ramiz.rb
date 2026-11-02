@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# Agensfield copy-on-write Git worktrees.
 class Ramiz < Formula
   desc "Ridiculously cheap Git worktrees using filesystem copy-on-write"
   homepage "https://github.com/agensfield/ramiz"
@@ -7,21 +10,21 @@ class Ramiz < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/agensfield/ramiz/releases/download/v1.0.3/ramiz_1.0.3_darwin_arm64.tar.gz"
-      sha256 "1dfb34c18c8d5671a0e1e5ffd8c98d23d36088af3b969d4babcba5f8b39c975a"
+      url "https://github.com/agensfield/ramiz/releases/download/v1.0.4/ramiz_1.0.4_darwin_arm64.tar.gz"
+      sha256 "e01c72873e73253ae14bb23274cbed5a116bb592dbc0910dd62c9aee150852f7"
     else
-      url "https://github.com/agensfield/ramiz/releases/download/v1.0.3/ramiz_1.0.3_darwin_amd64.tar.gz"
-      sha256 "35970191392cfc02a05fc8d31a67c8371008e1e38a32b8aab1d60cfa2d959536"
+      url "https://github.com/agensfield/ramiz/releases/download/v1.0.4/ramiz_1.0.4_darwin_amd64.tar.gz"
+      sha256 "4637935160b81a564b5a9ddacdeaf2e0a694b32016ae2ef997f1772569ffce50"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/agensfield/ramiz/releases/download/v1.0.3/ramiz_1.0.3_linux_arm64.tar.gz"
-      sha256 "602f89f278c58024173821ebd8067916036602d24ace645d644a600a3d0b5e8f"
+      url "https://github.com/agensfield/ramiz/releases/download/v1.0.4/ramiz_1.0.4_linux_arm64.tar.gz"
+      sha256 "a5b68a185aef927e7a4d21cc137eb0fa41d33fa07520bf1c8e5eeb72dfa5e88d"
     else
-      url "https://github.com/agensfield/ramiz/releases/download/v1.0.3/ramiz_1.0.3_linux_amd64.tar.gz"
-      sha256 "e2c3f25834abecdd993895d9acca9b20a2a09bd16b8bf0b0879ff5a2fc1c4231"
+      url "https://github.com/agensfield/ramiz/releases/download/v1.0.4/ramiz_1.0.4_linux_amd64.tar.gz"
+      sha256 "afba5392242375e2ca503c8206126f552374e2531534f1b5547152f68232cf4a"
     end
   end
 

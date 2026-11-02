@@ -1,0 +1,20 @@
+name: Asimov formula
+on:
+  push:
+    paths: [Formula/asimov.rb, .github/workflows/asimov.yml]
+  pull_request:
+    paths: [Formula/asimov.rb, .github/workflows/asimov.yml]
+permissions:
+  contents: read
+jobs:
+  install:
+    runs-on: macos-26
+    steps:
+      - name: Set up Homebrew and this tap
+        id: homebrew
+        uses: Homebrew/actions/setup-homebrew@f8d4222eb633e65c2a0157383cf80861fc7fae7f
+        with:
+          core: true
+          stable: true
+      - run: brew install --build-from-source "${{ steps.homebrew.outputs.tap-name }}/asimov"
+      - run: brew test "${{ steps.homebrew.outputs.tap-name }}/asimov"
