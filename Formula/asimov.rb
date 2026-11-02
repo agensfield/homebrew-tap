@@ -4,10 +4,9 @@
 class Asimov < Formula
   desc "Verified Time Machine exclusions for development worktrees"
   homepage "https://github.com/agensfield/asimov"
-  url "https://github.com/agensfield/asimov/releases/download/v0.13.1/asimov-0.13.1.tar.gz"
-  sha256 "58c279006977bb2f11f8b1c9389f909434d483fdc0db7a451aea8d564a1abd8c"
+  url "https://github.com/agensfield/asimov/releases/download/v0.13.2/asimov-0.13.2.tar.gz"
+  sha256 "785ee866f9a83b64766eacaa59b5ac1d8a33999dfef833e5bc6846880de6c01a"
   license "MIT"
-  revision 1
 
   depends_on "git"
   depends_on :macos
