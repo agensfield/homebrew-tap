@@ -2,6 +2,7 @@ name: Ramiz formula
 
 on:
   push:
+    branches: [main]
     paths:
       - Formula/ramiz.rb
       - .github/workflows/ramiz.yml
@@ -14,9 +15,13 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  group: ramiz-formula-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   install:
-    name: install (${{ matrix.runner }})
+    name: Ramiz install (${{ matrix.runner }})
     runs-on: ${{ matrix.runner }}
     strategy:
       fail-fast: false
