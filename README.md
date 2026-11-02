@@ -46,3 +46,10 @@ brew update
 brew upgrade scriba
 brew uninstall scriba
 ```
+
+### Asimov
+
+Verified Time Machine exclusions for changing development worktrees:
+`brew install agensfield/tap/asimov`. Review the packaged managed policy,
+then enable the user service with `brew services start agensfield/tap/asimov`.
+See https://github.com/agensfield/asimov for configuration and recovery guidance.
