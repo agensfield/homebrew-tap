@@ -4,8 +4,8 @@
 class Asimov < Formula
   desc "Verified Time Machine exclusions for development worktrees"
   homepage "https://github.com/agensfield/asimov"
-  url "https://github.com/agensfield/asimov/releases/download/v0.13.2/asimov-0.13.2.tar.gz"
-  sha256 "785ee866f9a83b64766eacaa59b5ac1d8a33999dfef833e5bc6846880de6c01a"
+  url "https://github.com/agensfield/asimov/releases/download/v0.14.0/asimov-0.14.0.tar.gz"
+  sha256 "8011e9d3c5f82ec7929a14685582e177f47b82a2c29b19a8f674f09013eb24bd"
   license "MIT"
 
   depends_on "git"
@@ -35,5 +35,7 @@ class Asimov < Formula
     assert_equal version.to_s, shell_output("#{bin}/asimov --version").strip
     assert_match "--dry-run", shell_output("#{bin}/asimov reconcile --help")
     assert_path_exists libexec/"asimov/reconcile.py"
+    assert_path_exists libexec/"asimov/path_helper.py"
+    assert_path_exists libexec/"asimov/install_path_helper.py"
   end
 end
