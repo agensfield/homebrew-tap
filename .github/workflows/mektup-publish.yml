@@ -1,0 +1,50 @@
+name: Publish Mektup formula
+
+on:
+  schedule:
+    - cron: '37 * * * *'
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - scripts/update_mektup.py
+      - tests/test_mektup_publication.py
+      - .github/workflows/mektup-publish.yml
+
+permissions:
+  contents: read
+
+concurrency:
+  group: mektup-formula-publication
+  cancel-in-progress: false
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+      - run: python3 -m unittest discover -s tests -v
+  publish:
+    needs: test
+    if: github.event_name != 'pull_request' && github.repository == 'agensfield/homebrew-tap' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+      actions: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          ref: main
+          persist-credentials: false
+      - name: Configure repository-local automation identity and authentication
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          gh auth setup-git
+      - run: python3 scripts/update_mektup.py
+        env:
+          GH_TOKEN: ${{ github.token }}
